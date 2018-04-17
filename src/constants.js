@@ -1,11 +1,2 @@
 export const SIGNED_IN = 'SIGNED_IN';
-
-
-export function logUser(email) {
-    const action = {
-        type: SIGNED_IN,
-        email
-    }
-}
-
-
+export const SET_GOALS = 'SET_GOALS';

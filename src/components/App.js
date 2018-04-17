@@ -21,7 +21,7 @@ class App extends Component {
   }
 }
 function mapDispatchToProps(state) {
-  console.log('state', state);
+  // console.log('state', state);
   return { }
 }
 export default connect(mapDispatchToProps, null)(App);
