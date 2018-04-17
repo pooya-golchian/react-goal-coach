@@ -7,22 +7,22 @@ import reducer from './reducers/index';
 import App from './components/App';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
+import { logUser } from './actions'
 import {firebaseApp} from './firebase';
 import registerServiceWorker from './registerServiceWorker';
 
 const store = createStore(reducer);
-
 firebaseApp.auth().onAuthStateChanged( user => {
     if (user) {
         console.log('User has signed in or up', user);
+        const { email } = user;
+        store.dispatch(logUser(email));
         browserHistory.push('/app');
     } else {
         console.log('User has signed out or still need to signin');
         browserHistory.replace('/signin');
     }
 });
-
-
 ReactDOM.render(
     <Provider store={store}>
         <Router path="/" history={browserHistory}>
