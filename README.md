@@ -1,4 +1,3 @@
-React Redux Goal Coacher
+##React Redux Goal Coacher
 
-
-It's loading ...
+*It's loading ...
