@@ -18,6 +18,7 @@ class App extends Component {
             <GoalList />
             <div><h3>Compelete Goal List</h3></div>
             <CompeleteGoalList />
+            <br/>
             <button onClick={ () => this.signOut() }>SignOut</button>
         </div>
     );
