@@ -14,8 +14,9 @@ class GoalList extends Component {
             const { email, title } = goal.val();
             const serverKey = goal.key;
             goals.push({ email, title, serverKey });
+            // console.log('goals',goals);
           })
-          console.log('goals',goals);
+        //   console.log('goals',goals);
           this.props.setGoals(goals);
         })
       }
